@@ -15,7 +15,7 @@ namespace JerryChat.Client
             JerryChatContext ctx = new JerryChatContext();
             User user = new User();
             user.Username = "batman";
-            user.Password = "brucewayne";
+            user.Password = "88ea39439e74fa27c09a4fc0bc8ebe6d00978392";
             ctx.Users.Add(user);
             ctx.SaveChanges();
         }

@@ -30,3 +30,9 @@ C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\Jerry
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\obj\Debug\JerryChat.Services.csprojResolveAssemblyReference.cache
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\obj\Debug\JerryChat.Services.dll
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\obj\Debug\JerryChat.Services.pdb
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\bin\JerryChat.Data.dll
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\bin\JerryChat.Models.dll
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\bin\JerryMouse.Repositories.dll
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\bin\JerryChat.Data.pdb
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\bin\JerryChat.Models.pdb
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Services\bin\JerryMouse.Repositories.pdb

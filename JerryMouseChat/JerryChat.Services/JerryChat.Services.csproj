@@ -123,10 +123,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\MessageModel.cs" />
+    <Compile Include="Models\RoomModel.cs" />
+    <Compile Include="Models\UserDetails.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -231,10 +237,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JerryChat.Data\JerryChat.Data.csproj">
+      <Project>{c0093454-9254-483a-ae18-cb6050546c8d}</Project>
+      <Name>JerryChat.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JerryChat.Models\JerryChat.Models.csproj">
+      <Project>{5f969b1f-29e5-41d7-b406-184594dfbde2}</Project>
+      <Name>JerryChat.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JerryMouse.Repositories\JerryMouse.Repositories.csproj">
+      <Project>{700f071f-8454-4a6e-a24d-744e205e93a6}</Project>
+      <Name>JerryMouse.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

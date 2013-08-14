@@ -11,43 +11,43 @@ namespace JerryMouse.Repositories
     public class UnitOfWork
     {
         private JerryChatContext context = new JerryChatContext();
-        private EfRepository<User> usersRepository;
-        private EfRepository<Message> messagesRepository;
-        private EfRepository<Room> roomsRepository;
+        private UsersRepository usersRepository;
+        private MessagesRepository messagesRepository;
+        private RoomsRepository roomsRepository;
 
-        public EfRepository<User> UsersRepository
+        public UsersRepository UsersRepository
         {
             get
             {
                 if (this.usersRepository == null)
                 {
-                    this.usersRepository = new EfRepository<User>(this.context);
+                    this.usersRepository = new UsersRepository(this.context);
                 }
 
                 return this.usersRepository;
             }
         }
 
-        public EfRepository<Message> MessagesRepository
+        public MessagesRepository MessagesRepository
         {
             get
             {
                 if (this.messagesRepository == null)
                 {
-                    this.messagesRepository = new EfRepository<Message>(this.context);
+                    this.messagesRepository = new MessagesRepository(this.context);
                 }
 
                 return this.messagesRepository;
             }
         }
 
-        public EfRepository<Room> RoomsRepository
+        public RoomsRepository RoomsRepository
         {
             get
             {
                 if (this.roomsRepository == null)
                 {
-                    this.roomsRepository = new EfRepository<Room>(this.context);
+                    this.roomsRepository = new RoomsRepository(this.context);
                 }
 
                 return this.roomsRepository;
