@@ -1,0 +1,10 @@
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Data.dll.config
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Data.dll
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Data.pdb
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\bin\Debug\EntityFramework.dll
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Models.dll
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Models.pdb
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\bin\Debug\EntityFramework.xml
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.csprojResolveAssemblyReference.cache
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.dll
+C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.pdb
