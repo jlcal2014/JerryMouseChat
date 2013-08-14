@@ -49,6 +49,8 @@
     <Compile Include="MessagesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomsRepository.cs" />
+    <Compile Include="ServerErrorException.cs" />
+    <Compile Include="SessionsRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="UsersRepository.cs" />
   </ItemGroup>

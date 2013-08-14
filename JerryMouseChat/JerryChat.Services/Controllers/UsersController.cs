@@ -57,39 +57,50 @@ namespace JerryChat.Services.Controllers
             return model;
         }
 
-        // POST api/Users
-        public HttpResponseMessage PostUser([FromBody]UserRegister user)
+        [HttpPost]
+        [ActionName("login")]
+        public HttpResponseMessage LoginUser(UserRegister user)
         {
-            var entityToAdd = new User()
+            User userEntity = this.unitOfWork.UsersRepository.Find(us => us.Username == user.Username
+                                                                    && us.Password == user.Password).FirstOrDefault();
+            if (userEntity == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotAcceptable);
+            }
+
+            string sessionKey = this.unitOfWork.SessionsRepository.LoginUser(userEntity);
+            this.unitOfWork.Save();
+
+            var response = Request.CreateResponse<string>(HttpStatusCode.OK, sessionKey);
+            return response;
+        }
+
+        [HttpPost]
+        [ActionName("register")]
+        public HttpResponseMessage RegisterUser(UserRegister user)
+        {
+            User userEntity = this.unitOfWork.UsersRepository.Find(us => us.Username == user.Username).FirstOrDefault();
+            if (userEntity != null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotAcceptable);
+            }
+
+            userEntity = new User()
             {
                 Username = user.Username,
                 Password = user.Password,
                 AvatarUrl = user.AvatarUrl
             };
 
-            var isCreated = this.unitOfWork.UsersRepository.Find(x => x.Username == entityToAdd.Username).FirstOrDefault();
-            if (isCreated != null)
-            {
-                throw new HttpResponseException(HttpStatusCode.NotAcceptable);
-            }
-            else
-            {
-                var createdEntity = this.unitOfWork.UsersRepository.Add(entityToAdd);
-                this.unitOfWork.Save();
+            this.unitOfWork.UsersRepository.Add(userEntity);
+            this.unitOfWork.Save();
 
-                var createdModel = new UserRegister()
-                {
-                    Id = createdEntity.Id,
-                    Username = createdEntity.Username,
-                    Password = createdEntity.Password
-                };
+            string sessionKey = this.unitOfWork.SessionsRepository.LoginUser(userEntity);
+            this.unitOfWork.Save();
 
-                var response = Request.CreateResponse<UserRegister>(HttpStatusCode.Created, createdModel);
-                var resourceLink = Url.Link("DefaultApi", new { id = createdModel.Id });
-
-                response.Headers.Location = new Uri(resourceLink);
-                return response;
-            }
+            var response = Request.CreateResponse<string>(HttpStatusCode.OK, sessionKey);
+            return response;
         }
+
     }
 }

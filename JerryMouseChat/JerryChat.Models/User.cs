@@ -13,6 +13,7 @@ namespace JerryChat.Models
         {
             this.Messages = new HashSet<Message>();
             this.Rooms = new HashSet<Room>();
+            this.Sessions = new HashSet<Session>();
         }
 
         [Key]
@@ -32,5 +33,6 @@ namespace JerryChat.Models
 
         public virtual ICollection<Message> Messages { get; set; }
         public virtual ICollection<Room> Rooms { get; set; }
+        public virtual ICollection<Session> Sessions { get; set; }
     }
 }

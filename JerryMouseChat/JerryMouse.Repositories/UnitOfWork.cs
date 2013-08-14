@@ -14,6 +14,7 @@ namespace JerryMouse.Repositories
         private UsersRepository usersRepository;
         private MessagesRepository messagesRepository;
         private RoomsRepository roomsRepository;
+        private SessionsRepository sessionsRepository;
 
         public UsersRepository UsersRepository
         {
@@ -51,6 +52,19 @@ namespace JerryMouse.Repositories
                 }
 
                 return this.roomsRepository;
+            }
+        }
+
+        public SessionsRepository SessionsRepository
+        {
+            get
+            {
+                if (this.sessionsRepository == null)
+                {
+                    this.sessionsRepository = new SessionsRepository(this.context);
+                }
+
+                return this.sessionsRepository;
             }
         }
 

@@ -15,5 +15,8 @@ namespace JerryMouse.Repositories
         {
 
         }
+
+        /* Public members */
+
     }
 }
