@@ -71,7 +71,15 @@ namespace JerryChat.Services.Controllers
             string sessionKey = this.unitOfWork.SessionsRepository.LoginUser(userEntity);
             this.unitOfWork.Save();
 
-            var response = Request.CreateResponse<string>(HttpStatusCode.OK, sessionKey);
+            UserRegister registeredUser = new UserRegister()
+            {
+                Id = userEntity.Id,
+                AvatarUrl = userEntity.AvatarUrl,
+                Username = userEntity.Username,
+                SessionKey = sessionKey
+            };
+
+            var response = Request.CreateResponse<UserRegister>(HttpStatusCode.OK, registeredUser);
             return response;
         }
 
@@ -98,7 +106,15 @@ namespace JerryChat.Services.Controllers
             string sessionKey = this.unitOfWork.SessionsRepository.LoginUser(userEntity);
             this.unitOfWork.Save();
 
-            var response = Request.CreateResponse<string>(HttpStatusCode.OK, sessionKey);
+            UserRegister registeredUser = new UserRegister()
+            {
+                Id = userEntity.Id,
+                AvatarUrl = userEntity.AvatarUrl,
+                Username = userEntity.Username,
+                SessionKey = sessionKey
+            };
+
+            var response = Request.CreateResponse<UserRegister>(HttpStatusCode.OK, registeredUser);
             return response;
         }
 
