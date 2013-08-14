@@ -58,7 +58,7 @@ namespace JerryChat.Services.Controllers
         }
 
         // POST api/Users
-        public HttpResponseMessage PostStudent([FromBody]UserRegister user)
+        public HttpResponseMessage PostUser([FromBody]UserRegister user)
         {
             var entityToAdd = new User()
             {
@@ -67,21 +67,29 @@ namespace JerryChat.Services.Controllers
                 AvatarUrl = user.AvatarUrl
             };
 
-            var createdEntity = this.unitOfWork.UsersRepository.Add(entityToAdd);
-            this.unitOfWork.Save();
-
-            var createdModel = new UserRegister()
+            var isCreated = this.unitOfWork.UsersRepository.Find(x => x.Username == entityToAdd.Username).FirstOrDefault();
+            if (isCreated != null)
             {
-                Id = createdEntity.Id,
-                Username = createdEntity.Username,
-                Password = createdEntity.Password
-            };
-            
-            var response = Request.CreateResponse<UserRegister>(HttpStatusCode.Created, createdModel);
-            var resourceLink = Url.Link("DefaultApi", new { id = createdModel.Id });
+                throw new HttpResponseException(HttpStatusCode.NotAcceptable);
+            }
+            else
+            {
+                var createdEntity = this.unitOfWork.UsersRepository.Add(entityToAdd);
+                this.unitOfWork.Save();
 
-            response.Headers.Location = new Uri(resourceLink);
-            return response;
+                var createdModel = new UserRegister()
+                {
+                    Id = createdEntity.Id,
+                    Username = createdEntity.Username,
+                    Password = createdEntity.Password
+                };
+
+                var response = Request.CreateResponse<UserRegister>(HttpStatusCode.Created, createdModel);
+                var resourceLink = Url.Link("DefaultApi", new { id = createdModel.Id });
+
+                response.Headers.Location = new Uri(resourceLink);
+                return response;
+            }
         }
     }
 }

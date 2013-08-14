@@ -10,3 +10,15 @@ C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\Jerry
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryChat.Models.dll
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryChat.Data.pdb
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryChat.Models.pdb
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryMouse.Repositories.dll.config
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryMouse.Repositories.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryMouse.Repositories.pdb
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryChat.Data.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryChat.Models.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryChat.Data.pdb
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\JerryChat.Models.pdb
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\obj\Debug\JerryMouse.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\obj\Debug\JerryMouse.Repositories.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryMouse.Repositories\obj\Debug\JerryMouse.Repositories.pdb

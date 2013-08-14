@@ -6,3 +6,11 @@ C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\Jerry
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Models\bin\Debug\EntityFramework.xml
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Models\obj\Debug\JerryChat.Models.dll
 C:\Users\nicroto\Desktop\CurrentProjects\JerryMouse\Project\JerryMouseChat\JerryChat.Models\obj\Debug\JerryChat.Models.pdb
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\bin\Debug\JerryChat.Models.dll.config
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\bin\Debug\JerryChat.Models.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\bin\Debug\JerryChat.Models.pdb
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\bin\Debug\EntityFramework.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\bin\Debug\EntityFramework.xml
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\obj\Debug\JerryChat.Models.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\obj\Debug\JerryChat.Models.dll
+C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Models\obj\Debug\JerryChat.Models.pdb
