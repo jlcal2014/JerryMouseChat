@@ -15,6 +15,8 @@ namespace JerryChat.Services.Controllers
         private UnitOfWork unitOfWork = new UnitOfWork();
 
         // GET api/rooms
+        [HttpGet]
+        [ActionName("get")]
         public IEnumerable<RoomModel> GetAll()
         {
             var roomsList = this.unitOfWork.RoomsRepository.All();
@@ -27,6 +29,8 @@ namespace JerryChat.Services.Controllers
         }
 
         // POST api/rooms
+        [HttpPost]
+        [ActionName("create")]
         public HttpResponseMessage PostCreate(RoomModel newRoom)
         {
             if (ModelState.IsValid)
@@ -49,49 +53,45 @@ namespace JerryChat.Services.Controllers
             }
         }
 
-        //// PUT api/rooms/5
-        //public HttpResponseMessage PutJoin(int id, [FromBody]string join, [FromBody]UserModel username)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        Room room = unitOfWork.RoomsRepository.Find(x => x.Id == id).FirstOrDefault();
-        //        User user = unitOfWork.UsersRepository.Find(x => x.Username == username.Username).FirstOrDefault();
-        //        room.Users.Add(user);
-        //        unitOfWork.RoomsRepository.Update(room.Id, room);
-        //        unitOfWork.Save();
+        // PUT api/rooms/5
+        [HttpPut]
+        [ActionName("join")]
+        public HttpResponseMessage PutJoin(int id, [FromBody]UserModel username)
+        {
+            if (ModelState.IsValid)
+            {
+                Room room = unitOfWork.RoomsRepository.Find(x => x.Id == id).FirstOrDefault();
+                User user = unitOfWork.UsersRepository.Find(x => x.Username == username.Username).FirstOrDefault();
+                room.Users.Add(user);
+                unitOfWork.RoomsRepository.Update(room.Id, room);
+                unitOfWork.Save();
 
-        //        HttpResponseMessage successfulResponse = Request.CreateResponse(HttpStatusCode.Accepted, room.Id);
-        //        successfulResponse.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = room.Id }));
-        //        return successfulResponse;
-        //    }
-        //    else
-        //    {
-        //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-        //    }
-        //}
+                HttpResponseMessage successfulResponse = Request.CreateResponse(HttpStatusCode.Accepted, room.Id);
+                successfulResponse.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = room.Id }));
+                return successfulResponse;
+            }
+            else
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            }
+        }
 
         // PUT api/rooms/5
-        public HttpResponseMessage PutJoinOrLeave(int id, [FromBody]UserModel username)
+        [HttpPut]
+        [ActionName("leave")]
+        public HttpResponseMessage PutLeave(int id, [FromBody]UserModel username)
         {
             if (ModelState.IsValid)
             {
                 Room room = unitOfWork.RoomsRepository.Find(x => x.Id == id).FirstOrDefault();
                 User user = unitOfWork.UsersRepository.Find(x => x.Username == username.Username).FirstOrDefault();
                 var isInRoom = room.Users.Where(x => x.Id == user.Id).FirstOrDefault();
-                if (isInRoom == null)
-                {
-                    room.Users.Add(user);
-                    unitOfWork.RoomsRepository.Update(room.Id, room);
-                    unitOfWork.Save();
-                }
-                else
-                {
-                    room.Users.Remove(user);
-                    user.Rooms.Remove(room);
-                    unitOfWork.RoomsRepository.Update(room.Id, room);
-                    unitOfWork.UsersRepository.Update(user.Id, user);
-                    unitOfWork.Save();
-                }
+
+                room.Users.Remove(user);
+                user.Rooms.Remove(room);
+                unitOfWork.RoomsRepository.Update(room.Id, room);
+                unitOfWork.UsersRepository.Update(user.Id, user);
+                unitOfWork.Save();
 
                 HttpResponseMessage successfulResponse = Request.CreateResponse(HttpStatusCode.Accepted, room.Id);
                 successfulResponse.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = room.Id }));
@@ -104,6 +104,8 @@ namespace JerryChat.Services.Controllers
         }
 
         // DELETE api/rooms/5
+        [HttpDelete]
+        [ActionName("delete")]
         public HttpResponseMessage Delete(int id)
         {
             var roomToDel = unitOfWork.RoomsRepository.Find(x => x.Id == id).FirstOrDefault();
