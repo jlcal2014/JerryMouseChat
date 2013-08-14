@@ -20,6 +20,8 @@ namespace JerryChat.Services.Controllers
         private UnitOfWork unitOfWork = new UnitOfWork();
 
         // GET api/Users
+        [HttpGet]
+        [ActionName("all")]
         public IEnumerable<UserModel> GetUsers()
         {
             var userEntities = this.unitOfWork.UsersRepository.All();
@@ -34,6 +36,8 @@ namespace JerryChat.Services.Controllers
         }
 
         // GET api/Users/5
+        [HttpGet]
+        [ActionName("single")]
         public UserDetails GetUser(int id)
         {
             var entity = this.unitOfWork.UsersRepository.Get(id);
