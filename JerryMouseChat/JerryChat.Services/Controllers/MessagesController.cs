@@ -15,6 +15,8 @@ namespace JerryChat.Services.Controllers
         private UnitOfWork unitOfWork = new UnitOfWork();
 
         // GET api/messages
+        [HttpGet]
+        [ActionName("get")]
         public IEnumerable<MessageModel> GetAllMessages(int id)
         {
             var room = this.unitOfWork.RoomsRepository.Find(x => x.Id == id).FirstOrDefault();
@@ -38,6 +40,8 @@ namespace JerryChat.Services.Controllers
         }
 
         // POST api/messages
+        [HttpPost]
+        [ActionName("send")]
         public HttpResponseMessage Post(int id, [FromBody]MessageModel message)
         {
             if (ModelState.IsValid)
@@ -53,7 +57,14 @@ namespace JerryChat.Services.Controllers
                 unitOfWork.MessagesRepository.Add(messageToPush);
                 unitOfWork.Save();
 
-                HttpResponseMessage successfulResponse = Request.CreateResponse<Message>(HttpStatusCode.Created, messageToPush);
+                MessageModel resultModel = new MessageModel()
+                {
+                    Date = messageToPush.Date,
+                    Author = messageToPush.Author.Username,
+                    Content = messageToPush.Content
+                };
+
+                HttpResponseMessage successfulResponse = Request.CreateResponse<MessageModel>(HttpStatusCode.Created, resultModel);
                 successfulResponse.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = messageToPush.Id }));
                 return successfulResponse;
             }
