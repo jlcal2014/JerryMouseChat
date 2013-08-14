@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JerryChat.Data", "JerryChat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JerryChat.Client", "JerryChat.Client\JerryChat.Client.csproj", "{BB9FA77D-0280-4910-A277-4C5BAA6BE102}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JerryMouse.Repositories", "JerryMouse.Repositories\JerryMouse.Repositories.csproj", "{700F071F-8454-4A6E-A24D-744E205E93A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{BB9FA77D-0280-4910-A277-4C5BAA6BE102}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB9FA77D-0280-4910-A277-4C5BAA6BE102}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB9FA77D-0280-4910-A277-4C5BAA6BE102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700F071F-8454-4A6E-A24D-744E205E93A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700F071F-8454-4A6E-A24D-744E205E93A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700F071F-8454-4A6E-A24D-744E205E93A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700F071F-8454-4A6E-A24D-744E205E93A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
