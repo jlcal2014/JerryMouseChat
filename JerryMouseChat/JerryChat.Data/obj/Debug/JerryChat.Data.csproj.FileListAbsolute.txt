@@ -18,3 +18,13 @@ C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\
 C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.dll
 C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Data.dll.config
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Data.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Data.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\Debug\EntityFramework.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Models.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\Debug\JerryChat.Models.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\bin\Debug\EntityFramework.xml
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.csprojResolveAssemblyReference.cache
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Data\obj\Debug\JerryChat.Data.pdb

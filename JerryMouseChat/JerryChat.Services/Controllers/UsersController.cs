@@ -52,10 +52,11 @@ namespace JerryChat.Services.Controllers
 
         // GET api/Users/5
         [HttpGet]
-        [ActionName("single")]
-        public UserDetails GetUser(int id)
+        [ActionName("me")]
+        public UserDetails GetUser(string sessionKey)
         {
-            var entity = this.unitOfWork.UsersRepository.Get(id);
+            int userId = this.unitOfWork.SessionsRepository.Find(x => x.SessionKey == sessionKey).Select(x => x.Id).First();
+            var entity = this.unitOfWork.UsersRepository.Find(x => x.Id == userId).First();
             var model = new UserDetails()
             {
                 Username = entity.Username,

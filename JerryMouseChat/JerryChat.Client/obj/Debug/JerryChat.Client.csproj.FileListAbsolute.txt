@@ -22,3 +22,15 @@ C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bi
 C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Models.pdb
 C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\EntityFramework.xml
 C:\Users\Ivan\Documents\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\obj\Debug\JerryChat.Client.csprojResolveAssemblyReference.cache
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Client.exe.config
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Client.exe
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Client.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\EntityFramework.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Data.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Models.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Data.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\JerryChat.Models.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\bin\Debug\EntityFramework.xml
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\obj\Debug\JerryChat.Client.csprojResolveAssemblyReference.cache
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\obj\Debug\JerryChat.Client.exe
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Client\obj\Debug\JerryChat.Client.pdb
