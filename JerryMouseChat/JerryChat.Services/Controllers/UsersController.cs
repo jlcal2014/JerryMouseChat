@@ -55,7 +55,7 @@ namespace JerryChat.Services.Controllers
         [ActionName("me")]
         public UserDetails GetUser(string sessionKey)
         {
-            int userId = this.unitOfWork.SessionsRepository.Find(x => x.SessionKey == sessionKey).Select(x => x.Id).First();
+            int userId = this.unitOfWork.SessionsRepository.Find(x => x.SessionKey == sessionKey).Select(x => x.User.Id).First();
             var entity = this.unitOfWork.UsersRepository.Find(x => x.Id == userId).First();
             var model = new UserDetails()
             {
