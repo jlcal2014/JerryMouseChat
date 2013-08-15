@@ -24,6 +24,8 @@ namespace JerryChat.Services.Controllers
                              select new RoomModel()
                              {
                                  Name = rooms.Name,
+                                 UsersCount = rooms.Users.Count,
+                                 IsLocked = rooms.Password != null
                              };
             return roomsModel.ToList();
         }

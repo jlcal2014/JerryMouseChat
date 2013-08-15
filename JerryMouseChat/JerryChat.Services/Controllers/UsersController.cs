@@ -35,6 +35,21 @@ namespace JerryChat.Services.Controllers
             return userModels.ToList();
         }
 
+        [HttpGet]
+        [ActionName("online")]
+        public IEnumerable<UserModel> GetOnlineUsers()
+        {
+            var userEntities = this.unitOfWork.UsersRepository.All().Where(us => us.Sessions.Count > 0);
+            var userModels =
+                                from usEntity in userEntities
+                                select new UserModel()
+                                {
+                                    Id = usEntity.Id,
+                                    Username = usEntity.Username
+                                };
+            return userModels.ToList();
+        }
+
         // GET api/Users/5
         [HttpGet]
         [ActionName("single")]
