@@ -11,5 +11,6 @@ namespace JerryChat.Services.Models
         public string Name { get; set; }
         public int UsersCount { get; set; }
         public bool IsLocked { get; set; }
+        public int AdminId { get; set; } 
     }
 }

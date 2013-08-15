@@ -40,13 +40,19 @@ namespace JerryChat.Services.Controllers
         {
             if (ModelState.IsValid)
             {
+                User admin = this.unitOfWork.UsersRepository.Find(x => x.Id == newRoom.AdminId).First();
+
                 Room roomToAdd = new Room()
                 {
                     Name = newRoom.Name
                 };
 
+                roomToAdd.Users.Add(admin);
+
                 unitOfWork.RoomsRepository.Add(roomToAdd);
                 unitOfWork.Save();
+
+                roomToAdd.Users = null;
 
                 HttpResponseMessage successfulResponse = Request.CreateResponse(HttpStatusCode.Created, roomToAdd);
                 successfulResponse.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = roomToAdd.Id }));
@@ -97,6 +103,11 @@ namespace JerryChat.Services.Controllers
                 unitOfWork.RoomsRepository.Update(room.Id, room);
                 unitOfWork.UsersRepository.Update(user.Id, user);
                 unitOfWork.Save();
+
+                if (room.Users.Count <= 0)
+                {
+                    this.Delete(room.Id);
+                }
 
                 HttpResponseMessage successfulResponse = Request.CreateResponse(HttpStatusCode.Accepted, room.Id);
                 successfulResponse.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = room.Id }));

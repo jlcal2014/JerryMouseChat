@@ -139,5 +139,21 @@ namespace JerryChat.Services.Controllers
             return response;
         }
 
+        // GET api/Users/5
+        [HttpGet]
+        [ActionName("logout")]
+        public HttpResponseMessage Logout(string id)
+        {
+            int userId = this.unitOfWork.SessionsRepository.Find(x => x.SessionKey == id).Select(x => x.User.Id).First();
+
+            var sessions = this.unitOfWork.SessionsRepository.Find(x => x.User.Id == userId);
+            foreach (var session in sessions)
+            {
+                this.unitOfWork.SessionsRepository.Delete(session);
+            }
+
+            this.unitOfWork.Save();
+            return new HttpResponseMessage(HttpStatusCode.OK);
+        }
     }
 }
