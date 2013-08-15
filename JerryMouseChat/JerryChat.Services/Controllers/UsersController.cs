@@ -52,7 +52,7 @@ namespace JerryChat.Services.Controllers
 
         // GET api/Users/5
         [HttpGet]
-        [ActionName("me")]
+        [ActionName("user")]
         public UserDetails GetUser(string sessionKey)
         {
             int userId = this.unitOfWork.SessionsRepository.Find(x => x.SessionKey == sessionKey).Select(x => x.User.Id).First();

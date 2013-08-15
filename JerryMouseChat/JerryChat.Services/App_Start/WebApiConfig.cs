@@ -12,10 +12,16 @@ namespace JerryChat.Services
     {
         public static void Register(HttpConfiguration config)
         {
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{action}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //);
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "api/{controller}/{action}/{sessionKey}",
+                defaults: new { sessionKey = RouteParameter.Optional }
             );
 
             config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
