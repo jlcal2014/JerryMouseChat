@@ -13,6 +13,7 @@ namespace JerryChat.Services.Controllers
     public class MessagesController : ApiController
     {
         private UnitOfWork unitOfWork = new UnitOfWork();
+          
 
         // GET api/messages
         [HttpGet]
