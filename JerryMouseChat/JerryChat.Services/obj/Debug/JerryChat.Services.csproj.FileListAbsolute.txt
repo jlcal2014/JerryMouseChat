@@ -114,3 +114,13 @@ D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\System.Web.WebPag
 D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\obj\Debug\JerryChat.Services.csprojResolveAssemblyReference.cache
 D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\obj\Debug\JerryChat.Services.dll
 D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\obj\Debug\JerryChat.Services.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Common.Logging.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Rest.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Social.Core.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Social.Dropbox.dll
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Rest.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Rest.xml
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Social.Core.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Social.Core.xml
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Social.Dropbox.pdb
+D:\GitHub\JerryMouseChat\JerryMouseChat\JerryChat.Services\bin\Spring.Social.Dropbox.xml

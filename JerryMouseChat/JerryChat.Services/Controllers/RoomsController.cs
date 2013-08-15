@@ -10,6 +10,9 @@ using System.Web.Http;
 
 namespace JerryChat.Services.Controllers
 {
+    using System.IO;
+    using System.Threading;
+
     public class RoomsController : ApiController
     {
         private UnitOfWork unitOfWork = new UnitOfWork();
