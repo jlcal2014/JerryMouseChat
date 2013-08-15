@@ -14,8 +14,6 @@ namespace JerryChat.Services
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-			var cors = new EnableCorsAttribute("http://localhost:53999", "*", "*");
-			config.EnableCors(cors);
         }
     }
 }
