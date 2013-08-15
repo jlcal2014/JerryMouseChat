@@ -53,9 +53,9 @@ namespace JerryChat.Services.Controllers
         // GET api/Users/5
         [HttpGet]
         [ActionName("user")]
-        public UserDetails GetUser(string sessionKey)
+        public UserDetails GetUser(string id)
         {
-            int userId = this.unitOfWork.SessionsRepository.Find(x => x.SessionKey == sessionKey).Select(x => x.User.Id).First();
+            int userId = this.unitOfWork.SessionsRepository.Find(x => x.SessionKey == id).Select(x => x.User.Id).First();
             var entity = this.unitOfWork.UsersRepository.Find(x => x.Id == userId).First();
             var model = new UserDetails()
             {
@@ -70,7 +70,8 @@ namespace JerryChat.Services.Controllers
                 Rooms = (from r in entity.Rooms
                          select new RoomModel()
                          {
-                             Name = r.Name
+                             Name = r.Name,
+                             Id = r.Id
                          }).ToList()
             };
 

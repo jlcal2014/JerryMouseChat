@@ -87,7 +87,7 @@ namespace JerryChat.Services.Controllers
             {
                 Room room = unitOfWork.RoomsRepository.Find(x => x.Id == id).FirstOrDefault();
                 User user = unitOfWork.UsersRepository.Find(x => x.Username == username.Username).FirstOrDefault();
-                var isInRoom = room.Users.Where(x => x.Id == user.Id).FirstOrDefault();
+                var isInRoom = room.Users.FirstOrDefault(x => x.Id == user.Id);
 
                 room.Users.Remove(user);
                 user.Rooms.Remove(room);
