@@ -134,7 +134,7 @@ namespace JerryChat.Services.Controllers
             string channel = "room-" + id;
 
             // Publish a sample message to Pubnub
-            List<object> publishResult = pubnub.Publish(channel, "Received message.");
+            List<object> publishResult = pubnub.Publish(channel, id.ToString());
         }
     }
 }
