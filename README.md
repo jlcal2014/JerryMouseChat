@@ -1,5 +1,9 @@
-JerryMouseChat
-==============
+Project contributors
+====================
 
-Chat
-test 2
+Team �Jerry Mouse�
+
+* IVAN MLADENOV
+* SEVGIN HASHIMOV /me
+* KAMEN RADEV
+* VICTOR TSENKOV
